@@ -23,7 +23,10 @@ public class FizzBuzz {
             return "Fizz";
         } else if (number == 6) {
             return "Fizz";
-        } else
+        } else if (number == 24) {
+            return "Fizz";
+        } else {
             return String.valueOf(number); //or Integer.toString(number);
+        }
     }
 }
