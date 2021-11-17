@@ -19,14 +19,9 @@ public class FizzBuzz {
     }
 
     public String convert(int number) {
-        if (number == 5) {
+        if (number % 5 == 0) {
             return "Buzz";
-        } else if (number == 10) {
-            return "Buzz";
-        } else if (number == 100) {
-            return "Buzz";
-        }
-        if (number % 3 == 0) {
+        } else if (number % 3 == 0) {
             return "Fizz";
         } else {
             return String.valueOf(number); //or Integer.toString(number);
