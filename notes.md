@@ -1,0 +1,4 @@
+- For 3 we get "Fizz"
+- For 1 we get "1"
+- For 13 we get "13"
+- Print on the standard output
