@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Convert {
 
+    //each test will have its own anyway, but this is better-looking than a lot of local instantiations
     private final FizzBuzz fizzBuzz = new FizzBuzz();
 
     @ParameterizedTest
@@ -32,7 +33,7 @@ public class Convert {
 
     @ParameterizedTest
     @ValueSource(ints = {15, 45, 75})
-    void multiples_of_15_to_FizzBuzz(int number) {
+    void multiples_of_3_and_5_to_FizzBuzz(int number) {
         assertEquals("FizzBuzz", fizzBuzz.convert(number));
     }
 }

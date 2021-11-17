@@ -7,6 +7,10 @@
 
 package dssc.assignment.fizzbuzz;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class FizzBuzz {
     public static void main(String... args) {
         for (int i = 1; i <= 105; i++) {
@@ -28,5 +32,10 @@ public class FizzBuzz {
         } else {
             return String.valueOf(number); //or Integer.toString(number);
         }
+    }
+
+    public void print() {
+        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(this::convert);
+        System.out.println(fizzBuzzes.collect(Collectors.joining(", ")));
     }
 }
