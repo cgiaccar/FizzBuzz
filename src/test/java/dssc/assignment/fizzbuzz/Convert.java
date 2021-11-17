@@ -28,4 +28,9 @@ public class Convert {
     void number_5_to_Buzz() {
         assertEquals("Buzz", fizzBuzz.convert(5));
     }
+
+    @Test
+    void number_10_to_Buzz() {
+        assertEquals("Buzz", fizzBuzz.convert(10));
+    }
 }
