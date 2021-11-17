@@ -1,8 +1,11 @@
 package dssc.assignment.fizzbuzz;
 
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class Convert {
 
@@ -11,6 +14,11 @@ public class Convert {
     @ParameterizedTest
     @CsvSource({"1, 1", "2, 2", "41, 41" })
     void numbers_not_divisible_by_3_or_5_to_strings(int number, String expected) {
-        Assertions.assertEquals(expected, fizzBuzz.convert(number));
+        assertEquals(expected, fizzBuzz.convert(number));
+    }
+
+    @Test
+    void number_3_to_Fizz() {
+        assertEquals("Fizz", fizzBuzz.convert(3));
     }
 }
