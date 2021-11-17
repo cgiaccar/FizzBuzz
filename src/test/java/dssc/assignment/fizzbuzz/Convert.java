@@ -30,18 +30,9 @@ public class Convert {
         assertEquals("Buzz", fizzBuzz.convert(number));
     }
 
-    @Test
-    void number_15_to_FizzBuzz() {
-        assertEquals("FizzBuzz", fizzBuzz.convert(15));
-    }
-
-    @Test
-    void number_45_to_FizzBuzz() {
-        assertEquals("FizzBuzz", fizzBuzz.convert(45));
-    }
-
-    @Test
-    void number_75_to_FizzBuzz() {
-        assertEquals("FizzBuzz", fizzBuzz.convert(75));
+    @ParameterizedTest
+    @ValueSource(ints = {15, 45, 75})
+    void multiples_of_15_to_FizzBuzz(int number) {
+        assertEquals("FizzBuzz", fizzBuzz.convert(number));
     }
 }
