@@ -19,11 +19,7 @@ public class FizzBuzz {
     }
 
     public String convert(int number) {
-        if (number == 3) {
-            return "Fizz";
-        } else if (number == 6) {
-            return "Fizz";
-        } else if (number == 24) {
+        if (number % 3 == 0) {
             return "Fizz";
         } else {
             return String.valueOf(number); //or Integer.toString(number);
