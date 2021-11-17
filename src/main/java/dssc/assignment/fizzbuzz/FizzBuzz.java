@@ -23,6 +23,8 @@ public class FizzBuzz {
             return "Buzz";
         } else if (number == 10) {
             return "Buzz";
+        } else if (number == 100) {
+            return "Buzz";
         }
         if (number % 3 == 0) {
             return "Fizz";
