@@ -1,5 +1,6 @@
 package dssc.assignment.fizzbuzz;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -21,5 +22,10 @@ public class Convert {
     @ValueSource(ints = {3, 6, 24})
     void multiples_of_three_to_Fizz(int number) {
         assertEquals("Fizz", fizzBuzz.convert(number));
+    }
+
+    @Test
+    void number_5_to_Buzz() {
+        assertEquals("Buzz", fizzBuzz.convert(5));
     }
 }
