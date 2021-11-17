@@ -13,16 +13,18 @@ import java.util.stream.Stream;
 
 public class FizzBuzz {
     public static void main(String... args) {
-        for (int i = 1; i <= 105; i++) {
-            String result = "";
-            result += (i % 3) == 0 ? "Fizz" : "";
-            result += (i % 5) == 0 ? "Buzz" : "";
-            result += (i % 7) == 0 ? "Bang" : "";
-            System.out.println(!result.isEmpty() ? result : i);
-        }
+        print();
+
+        // for (int i = 1; i <= 105; i++) {
+        //     String result = "";
+        //     result += (i % 3) == 0 ? "Fizz" : "";
+        //     result += (i % 5) == 0 ? "Buzz" : "";
+        //     result += (i % 7) == 0 ? "Bang" : "";
+        //     System.out.println(!result.isEmpty() ? result : i);
+        // }
     }
 
-    public String convert(int number) {
+    public static String convert(int number) {
         if (number % 15 == 0) {
             return "FizzBuzz";
         } else if (number % 5 == 0) {
@@ -34,8 +36,8 @@ public class FizzBuzz {
         }
     }
 
-    public void print() {
-        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(this::convert);
+    public static void print() {
+        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(i -> convert(i));
         System.out.println(fizzBuzzes.collect(Collectors.joining(", ")));
     }
 }
