@@ -20,22 +20,14 @@ public class Convert {
 
     @ParameterizedTest
     @ValueSource(ints = {3, 6, 24})
-    void multiples_of_three_to_Fizz(int number) {
+    void multiples_of_3_to_Fizz(int number) {
         assertEquals("Fizz", fizzBuzz.convert(number));
     }
 
-    @Test
-    void number_5_to_Buzz() {
-        assertEquals("Buzz", fizzBuzz.convert(5));
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 100})
+    void multiples_of_5_to_Buzz(int number) {
+        assertEquals("Buzz", fizzBuzz.convert(number));
     }
 
-    @Test
-    void number_10_to_Buzz() {
-        assertEquals("Buzz", fizzBuzz.convert(10));
-    }
-
-    @Test
-    void number_100_to_Buzz() {
-        assertEquals("Buzz", fizzBuzz.convert(100));
-    }
 }
