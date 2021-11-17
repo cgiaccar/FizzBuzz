@@ -19,9 +19,11 @@ public class FizzBuzz {
     }
 
     public String convert(int number) {
-        if (number == 3){
+        if (number == 3) {
             return "Fizz";
-        }
-        return String.valueOf(number); //or Integer.toString(number);
+        } else if (number == 6) {
+            return "Fizz";
+        } else
+            return String.valueOf(number); //or Integer.toString(number);
     }
 }
